@@ -1,0 +1,1 @@
+python model/metagene1.py --input_dir ./data --output_dir output/metagene1

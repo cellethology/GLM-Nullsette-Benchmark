@@ -9,10 +9,6 @@ from utils.ll_calculation import compute_ll
 
 
 def main():
-    """
-    example command:
-    python metagene1.py --input_dir ./data --output_dir output/metagene1
-    """
     parser = argparse.ArgumentParser(description="Compute log-likelihood scores for sequences using METAGENE-1 model.")
     parser.add_argument('--input_dir', type=str, required=True,
                         help='Directory containing input FASTA files.')
