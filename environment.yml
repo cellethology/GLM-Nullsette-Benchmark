@@ -2,9 +2,11 @@ name: glm_eval
 channels:
   - pytorch
   - bioconda
+  - defaults
   - nvidia
   - conda-forge
-  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_gnu
@@ -150,26 +152,54 @@ dependencies:
   - zstandard=0.23.0=py311h9ecbd09_1
   - zstd=1.5.7=hb8e6e7a_2
   - pip:
+      - aiohappyeyeballs==2.6.1
+      - aiohttp==3.11.18
+      - aiosignal==1.3.2
+      - antlr4-python3-runtime==4.9.3
+      - attrs==25.3.0
+      - beautifulsoup4==4.13.4
       - biopython==1.85
       - biotite==1.2.0
       - biotraj==1.2.2
+      - datasets==3.5.1
+      - dill==0.3.8
       - einops==0.8.1
       - flash-attn==2.7.4.post1
-      - fsspec==2025.3.2
+      - frozenlist==1.6.0
+      - fsspec==2025.3.0
+      - gdown==5.2.0
+      - genomic-benchmarks==0.0.9
       - huggingface-hub==0.30.2
+      - hydra-core==1.3.2
+      - importlib-metadata==8.7.0
+      - liftover==1.3.2
+      - mambapy==1.2.0
       - msgpack==1.1.0
+      - multidict==6.4.3
+      - multiprocess==0.70.16
+      - ninja==1.11.1.4
+      - omegaconf==2.3.0
+      - opt-einsum==3.4.0
       - packaging==25.0
       - pandas==2.2.3
+      - polars==1.28.1
+      - propcache==0.3.1
+      - pyarrow==20.0.0
+      - pyfaidx==0.8.1.3
       - python-dateutil==2.9.0.post0
       - pytz==2025.2
       - regex==2024.11.6
       - safetensors==0.5.3
       - scipy==1.15.2
       - six==1.17.0
+      - soupsieve==2.7
       - stripedhyena==0.2.2
       - sympy==1.13.1
       - tokenizers==0.21.1
       - tqdm==4.67.1
       - transformers==4.51.1
       - tzdata==2025.2
-prefix: /home/ubuntu/anaconda3/envs/glm_eval
+      - xxhash==3.5.0
+      - yarl==1.20.0
+      - zipp==3.21.0
+prefix: /home/ubuntu/miniconda3/envs/glm_eval

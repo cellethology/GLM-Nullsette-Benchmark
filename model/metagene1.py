@@ -5,7 +5,7 @@ import pandas as pd
 import os
 from tqdm import tqdm
 import argparse
-from utils.ll_calculation import compute_ll
+from utils.ll_calculation import compute_ll_clm
 
 
 def main():
@@ -33,19 +33,14 @@ def main():
 
         seqs = [str(record.seq) for record in SeqIO.parse(input_fasta, 'fasta')]
         scores = []
-        embeddings = []
 
         for seq in tqdm(seqs, desc="Processing sequences"):
             inputs = tokenizer(seq, return_tensors="pt")
             inputs = inputs.to(model.device)
             with torch.no_grad():
-                outputs = model(**inputs)
-                logits = outputs.logits
-                hidden_states = outputs.hidden_states
-                last_hidden_state = hidden_states[-1][:, -1, :].cpu().numpy()
-                embeddings.append(last_hidden_state)
+                logits = model(**inputs).logits
 
-            ll_score = compute_ll(logits, inputs['input_ids'], reduction='mean').item()
+            ll_score = compute_ll_clm(logits, inputs['input_ids'], reduction='mean').item()
             scores.append(ll_score)
 
         df = pd.DataFrame({'seqs': seqs, 'scores': scores})
