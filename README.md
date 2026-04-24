@@ -12,8 +12,8 @@ The current release contains five processed datasets:
 
 | Dataset folder | System | Upstream source | Nonmutant cassettes | Nullsette mutant types | Notes |
 | --- | --- | --- | ---: | ---: | --- |
-| `deboer/Abf1TATA` | Yeast | deBoer MPRA library | 1500 | 11 | Promoters containing Abf1/TATA features in randomized backgrounds |
-| `deboer/pTpA` | Yeast | deBoer MPRA library | 1500 | 11 | Promoters containing polyT/polyA nucleosome-disfavoring features |
+| `deboer/Abf1TATA` | Yeast | deBoer MPRA library | 1500 | 11 | Abf1TATA is designed by embedding conserved transcription factor binding sites such as Abf1 and a canonical TATA box |
+| `deboer/pTpA` | Yeast | deBoer MPRA library | 1500 | 11 | pTpA consists of synthetic promoters constructed with a poly-T–poly-A architecture |
 | `kosuri` | E. coli | Kosuri promoter-RBS library | 1500 | 19 | Rationally designed promoter-RBS pairs upstream of sfGFP |
 | `lagator` | E. coli | Lagator promoter library | 1500 | 19 | Random promoter sequences upstream of sfGFP |
 | `zahm` | Mammalian | Zahm TRE/minimal-promoter library | 1500 | 11 | Human/mouse TREs combined with minimal promoters |
