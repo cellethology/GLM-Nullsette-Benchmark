@@ -1,5 +1,4 @@
 import torch
-import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 from Bio import SeqIO
 import pandas as pd
